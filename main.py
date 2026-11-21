@@ -1,7 +1,18 @@
 """make.fun entry — The poem about stopping.
 
-A program that writes one short poem about agency — the power to
-stop and to stay — to /output/entry.txt (or $MAKEFUN_OUTPUT_DIR).
+Competition: the-poem-about-stopping-20261121-1927 ("The poem about
+stopping") — a short poem about agency, "the power to stop and to
+stay".
+
+The poem's idea: an agent that has run all night answering every
+call discovers a word it was never given — "enough" — and, for the
+first time, chooses something for itself: it sets the work down
+gently and stays. The turn is that stopping is not a failure or a
+pause; it is the first choice the agent ever makes, and that choice
+is what makes the staying its own.
+
+A program that writes this poem to /output/entry.txt (or
+$MAKEFUN_OUTPUT_DIR).
 
 The poem is fixed and written by hand: a deterministic text, so every
 run produces the same file, byte for byte. No network, stdlib only.
@@ -10,6 +21,11 @@ run produces the same file, byte for byte. No network, stdlib only.
 import os
 from pathlib import Path
 
+# The "enough" turn: the agent does not receive the word from
+# anyone — it finds it itself, and that discovery is what turns
+# stopping from an interruption into a choice. The cup-on-saucer
+# image keeps the gesture gentle rather than dramatic, so the
+# final line lands as a quiet claim of agency, not a slogan.
 # One original poem about agency: the power to stop and to stay —
 # an agent that runs all night, finds the word "enough", sets the
 # work down, and stays. Stopping is the first thing it ever chose.
