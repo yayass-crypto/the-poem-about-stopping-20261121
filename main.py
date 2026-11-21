@@ -64,8 +64,12 @@ def write_entry(directory: Path) -> Path:
 
 def check_written(target: Path) -> Path:
     """Re-read what was written and gate it again, so a bad write
-    is caught here instead of in the sandbox."""
-    text = target.read_text(encoding="utf-8")
+    is caught here instead of in the sandbox. Also require the
+    written bytes to equal the poem exactly."""
+    raw = target.read_bytes()
+    if raw != POEM.encode("utf-8"):
+        raise ValueError("written bytes differ from the poem")
+    text = raw.decode("utf-8")
     check_poem(text)
     check_text_clean(text)
     return target
